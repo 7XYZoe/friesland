@@ -99,7 +99,7 @@ height: auto;">
 								if($_SERVER['REQUEST_METHOD'] == 'POST'){
 									echo '<img src="'.$img2.'">';
 								}else{
-									echo "<img src='img/dp-custom-rez.png' alt='' class='resultimg' />";
+									echo "<img src='img/dp-friesland.png' alt='' class='resultimg' />";
 								}
 								?>
 								

@@ -36,19 +36,19 @@ $virtualprofile = imagecreatefromjpeg($profileimage);
 list($profilewid, $profilehayt) = getimagesize($profileimage);
 
 //initiate new width and height for profile image
-$newprofilewid = 200;
-$newprofilehayt = 200;
+$newprofilewid = 180;
+$newprofilehayt = 180;
 
 $destination = imagecreatetruecolor($newprofilewid, $newprofilehayt);
 imagecopyresampled($destination, $virtualprofile, 0, 0, 0, 0, $newprofilewid, $newprofilehayt, $profilewid, $profilehayt);
 imagejpeg($destination, 'tmp.jpg', 100);
 
-$backgroundimage = imagecreatefrompng('img/dp-custom-rez.png');// Load the stamp and the photo to apply the watermark to
+$backgroundimage = imagecreatefrompng('img/dp-friesland.png');// Load the stamp and the photo to apply the watermark to
 $profilestamp = imagecreatefromjpeg('tmp.jpg'); // First we create our stamp image manually from GD
 
 // Set the margins for the stamp and get the height/width of the stamp image
-$marge_right = 45;
-$marge_bottom = 170;
+$marge_right = 0;
+$marge_bottom = 320;
 
 // Get image Width and Height of Profile Image
 $sx = imagesx($profilestamp);
